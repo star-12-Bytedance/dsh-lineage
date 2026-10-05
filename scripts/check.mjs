@@ -195,6 +195,8 @@ if (mod !== undefined) {
   }
 
   // 用一个空语料的 ctx 走一遍真实注册 + 执行路径。
+  // `get` 是可选服务的唯一正确取值方式：`fs` 故意不在 inject 里，所以这里
+  // **不提供** fs —— 正好把「fs 缺失时降级返回原始路径」这条路径测到。
   let tool;
   try {
     mod.apply(
@@ -205,6 +207,7 @@ if (mod !== undefined) {
           async readSession() { throw new Error('no session'); },
           async readTitleSnapshots() { return []; },
         },
+        get: (key) => (key === 'fs' ? undefined : undefined),
       },
       resolved ?? {},
     );

@@ -412,7 +412,11 @@ function apply(ctx, config = {}) {
         const signal = exec?.signal;
 
         const sessionQuery = ctx.sessionQuery;
-        const fs = ctx.fs;
+        // `fs` 是**可选**服务，必须走 ctx.get() 取值：直接写 `ctx.fs` 会抛出
+        // "cannot get property \"fs\" without inject"（未声明 inject 的硬读取会被
+        // Cordis 拒绝），而把它写进 inject 又会让缺 `fs` 的组合整个 fiber 停在
+        // PENDING。两者都会让插件在一个完全正常的组合里不可用。
+        const fs = ctx.get('fs');
 
         // listSessions 已经按最新优先返回，直接取前 maxSessions 个。
         // 不用 header.createdAt 预筛掉旧会话：会话可以被恢复，九十天前建的会话今天
