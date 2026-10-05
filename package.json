@@ -1,0 +1,74 @@
+{
+  "name": "@xinghe-source/dsh-lineage",
+  "version": "0.1.0",
+  "description": "Cross-session file lineage for DeepSeek Harness (DSH): find any file an earlier session produced, and report the absolute path, session, turn and tool that wrote it. Answers \"where is that file\" and \"where did this file come from\" without a network or an index.",
+  "license": "MIT",
+  "author": {
+    "name": "Xinghe-Source",
+    "email": "niu071112@qq.com",
+    "url": "https://github.com/Xinghe-Source"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "lineage",
+    "file-lineage",
+    "provenance",
+    "session-history",
+    "session-search",
+    "artifact-tracking",
+    "deepseek",
+    "ai-agents",
+    "插件",
+    "文件血统",
+    "会话检索",
+    "产物定位"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xinghe-Source/dsh-lineage.git"
+  },
+  "homepage": "https://github.com/Xinghe-Source/dsh-lineage#readme",
+  "bugs": {
+    "url": "https://github.com/Xinghe-Source/dsh-lineage/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-session-query": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "check:strict": "node scripts/check.mjs --strict",
+    "pack:check": "npm pack --dry-run"
+  }
+}

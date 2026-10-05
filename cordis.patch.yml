@@ -1,0 +1,21 @@
+# @xinghe-source/dsh-lineage 挂载补丁（bundle patch，insert 语义）
+#
+# 作为 dsh.profile.bundles 的一层在 profile 上做一次 insert；后到的 bundle 层与用户
+# 自己的 cordis.patch.yml 按行 id 覆盖。config 必须写成静态字面量——Loader 不会对
+# 这里的值做表达式求值。
+#
+# 这里只写真正需要显式化的两个键；pathKeys 与 defaultDays 沿用 Config schema 的
+# 默认值，不在补丁里重复一遍（重复会把 schema 的默认值钉死，日后改默认值会被这里
+# 静默盖掉）。
+- insert:
+    - id: lineage
+      name: '@xinghe-source/dsh-lineage'
+      config:
+        # 视为「会产出文件」的工具名。DSH 的 write / edit 用 file_path 参数，
+        # present 是 files:[{path}]——插件两种形状都会解析。
+        mutateTools:
+          - write
+          - edit
+          - present
+        # 单次检索最多重放多少个会话日志；直接决定耗时，按需调大。
+        maxSessions: 40

@@ -1,0 +1,26 @@
+# 依赖与构建产物
+node_modules/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# 打包产物
+*.tgz
+dist/
+build/
+
+# 临时验证脚本：真实会话语料来自本机 ~/.dsh/sessions，不适合提交，
+# 因此任何本地验证脚本都放在这里，不进入版本库。
+verify*.mjs
+*-verify.mjs
+tmp/
+*.jsonl
+*.jsonl.zstd
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
