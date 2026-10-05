@@ -31,5 +31,5 @@
 - 已在本机真实会话语料（13 个会话、51 次成功的 write/edit/present 调用）上验证
   路径抽取，并在 18 项边界用例上验证失败剔除、合并计数、嵌套路径与故障隔离。
 
-[Unreleased]: https://github.com/Xinghe-Source/dsh-lineage/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/Xinghe-Source/dsh-lineage/releases/tag/v0.1.0
+[Unreleased]: https://github.com/star-12-Bytedance/dsh-lineage/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/star-12-Bytedance/dsh-lineage/releases/tag/v0.1.0

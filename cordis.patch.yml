@@ -1,4 +1,4 @@
-# @xinghe-source/dsh-lineage 挂载补丁（bundle patch，insert 语义）
+# @star-12-Bytedance/dsh-lineage 挂载补丁（bundle patch，insert 语义）
 #
 # 作为 dsh.profile.bundles 的一层在 profile 上做一次 insert；后到的 bundle 层与用户
 # 自己的 cordis.patch.yml 按行 id 覆盖。config 必须写成静态字面量——Loader 不会对
@@ -9,7 +9,7 @@
 # 静默盖掉）。
 - insert:
     - id: lineage
-      name: '@xinghe-source/dsh-lineage'
+      name: '@star-12-Bytedance/dsh-lineage'
       config:
         # 视为「会产出文件」的工具名。DSH 的 write / edit 用 file_path 参数，
         # present 是 files:[{path}]——插件两种形状都会解析。

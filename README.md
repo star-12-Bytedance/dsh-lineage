@@ -90,7 +90,7 @@ C:\Users\lenovo\OneDrive\Desktop\dsh-plugin-recon.md  [文件已不存在]
 ## 安装
 
 ```bash
-dsh plugin --profile <你的profile> add @xinghe-source/dsh-lineage
+dsh plugin --profile <你的profile> add @star-12-bytedance/dsh-lineage
 ```
 
 或从本地目录安装（开发用）：
@@ -236,7 +236,7 @@ dsh --profile <你的profile>
 ## 开发
 
 ```bash
-git clone https://github.com/Xinghe-Source/dsh-lineage.git
+git clone https://github.com/star-12-Bytedance/dsh-lineage.git
 cd dsh-lineage
 
 # 插件的裸导入 @deepseek-ai/* 由 DSH 载体提供；本地开发建一个软链指向它：
@@ -260,4 +260,4 @@ CI 会先显式安装 peer 依赖再以 `--strict` 运行，因此装配检查�
 
 ## License
 
-[MIT](LICENSE) © 2026 Xinghe-Source
+[MIT](LICENSE) © 2026 star-12-Bytedance

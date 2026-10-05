@@ -1,12 +1,12 @@
 {
-  "name": "@xinghe-source/dsh-lineage",
+  "name": "@star-12-bytedance/dsh-lineage",
   "version": "0.1.0",
   "description": "Cross-session file lineage for DeepSeek Harness (DSH): find any file an earlier session produced, and report the absolute path, session, turn and tool that wrote it. Answers \"where is that file\" and \"where did this file come from\" without a network or an index.",
   "license": "MIT",
   "author": {
-    "name": "Xinghe-Source",
+    "name": "star-12-Bytedance",
     "email": "niu071112@qq.com",
-    "url": "https://github.com/Xinghe-Source"
+    "url": "https://github.com/star-12-Bytedance"
   },
   "type": "module",
   "main": "index.js",
@@ -43,11 +43,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xinghe-Source/dsh-lineage.git"
+    "url": "git+https://github.com/star-12-Bytedance/dsh-lineage.git"
   },
-  "homepage": "https://github.com/Xinghe-Source/dsh-lineage#readme",
+  "homepage": "https://github.com/star-12-Bytedance/dsh-lineage#readme",
   "bugs": {
-    "url": "https://github.com/Xinghe-Source/dsh-lineage/issues"
+    "url": "https://github.com/star-12-Bytedance/dsh-lineage/issues"
   },
   "engines": {
     "node": ">=20"
